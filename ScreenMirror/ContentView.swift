@@ -1,12 +1,6 @@
-//
-//  ContentView.swift
-//  ScreenMirror
-//
-//  Created by Kiri4of on 23/05/2025.
-//
 
 import SwiftUI
-
+//first
 struct ContentView: View {
     var body: some View {
         VStack {
