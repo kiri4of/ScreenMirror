@@ -1,17 +1,14 @@
-//
-//  ScreenMirrorApp.swift
-//  ScreenMirror
-//
-//  Created by Kiri4of on 23/05/2025.
-//
 
 import SwiftUI
 
 @main
 struct ScreenMirrorApp: App {
+    
+    @StateObject private var onboardingViewModel = OnboardingViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView(viewModel: onboardingViewModel)
         }
     }
 }
