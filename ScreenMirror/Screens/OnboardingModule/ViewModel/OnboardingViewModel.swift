@@ -6,31 +6,35 @@ class OnboardingViewModel: ObservableObject {
     //array of data
     let pages: [OnboardingPage] = [
         OnboardingPage(
-            upperHeader: NSLocalizedString("Welcome to", comment: "Onboarding blue title part"),
+            upperHeader: NSLocalizedString("Welcome to", comment: ""),
+            highlightWord: NSLocalizedString("Welcome", comment: ""),
             lowerHeader: NSLocalizedString("Screen Mirror", comment: "Onboarding black title part"),
-            firstLine: NSLocalizedString("Stream your phone's display to your ", comment: "Onboarding first line"),
-            secondLine: NSLocalizedString("TV in a flash with just a tap", comment: "Onboarding second line"),
+            firstLine: NSLocalizedString("Stream your phone's display to your ", comment: ""),
+            secondLine: NSLocalizedString("TV in a flash with just a tap", comment: ""),
             imageName: "onb1"
         ),
         OnboardingPage(
-            upperHeader: NSLocalizedString("Quick conect", comment: "Onboarding blue title part"),
-            lowerHeader: NSLocalizedString("and cast", comment: "Onboarding black title part"),
-            firstLine: NSLocalizedString("Your phone and TV must be on the ", comment: "Onboarding first line"),
-            secondLine: NSLocalizedString("same WI-FI network", comment: "Onboarding second line"),
+            upperHeader: NSLocalizedString("Quick conect", comment: ""),
+            highlightWord: NSLocalizedString("Quick", comment: ""),
+            lowerHeader: NSLocalizedString("and cast", comment: ""),
+            firstLine: NSLocalizedString("Your phone and TV must be on the ", comment: ""),
+            secondLine: NSLocalizedString("same WI-FI network", comment: ""),
             imageName: "onb2"
         ),
         OnboardingPage(
-            upperHeader: NSLocalizedString("We'd love to", comment: "Onboarding blue title part"),
-            lowerHeader: NSLocalizedString("hear your review", comment: "Onboarding black title part"),
-            firstLine: NSLocalizedString("Tell us what you think - we're here", comment: "Onboarding first line"),
-            secondLine: NSLocalizedString("to make it better", comment: "Onboarding second line"),
+            upperHeader: NSLocalizedString("We'd love to", comment: ""),
+            highlightWord: NSLocalizedString("review", comment: ""),
+            lowerHeader: NSLocalizedString("hear your review", comment: ""),
+            firstLine: NSLocalizedString("Tell us what you think - we're here", comment: ""),
+            secondLine: NSLocalizedString("to make it better", comment: ""),
             imageName: "onb3"
         ),
         OnboardingPage(
-            upperHeader: NSLocalizedString("Mirror photos", comment: "Part 1 of 'What people say about us' heading"),
-            lowerHeader: NSLocalizedString("and apps", comment: "Part 2 of 'What people say about us' heading"),
-            firstLine: NSLocalizedString("Just one click to see any photos or ", comment: "Onboarding first line"),
-            secondLine: NSLocalizedString("film from your phone on your TV.", comment: "Onboarding second line"),
+            upperHeader: NSLocalizedString("Mirror photos", comment: ""),
+            highlightWord: NSLocalizedString("Mirror", comment: ""),
+            lowerHeader: NSLocalizedString("and apps", comment: ""),
+            firstLine: NSLocalizedString("Just one click to see any photos or ", comment: ""),
+            secondLine: NSLocalizedString("film from your phone on your TV.", comment: ""),
             imageName: "onb4"
         )
     ]

@@ -29,15 +29,15 @@ enum AppColor {
           )
       }
     static var backgroundGradient: LinearGradient {
-        LinearGradient(
-            gradient: Gradient(colors: [
-                Color(red: 255/255, green: 34/255, blue: 39/255),
-                Color.black
-            ]),
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-    }
+         LinearGradient(
+             gradient: Gradient(colors: [
+                 Color(red: 11/255, green: 11/255, blue: 11/255),
+                 Color(red: 18/255, green: 13/255, blue: 13/255)
+             ]),
+             startPoint: .top,
+             endPoint: .bottom
+         )
+     }
 
 }
 

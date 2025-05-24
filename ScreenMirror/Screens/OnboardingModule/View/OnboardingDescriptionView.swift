@@ -3,6 +3,7 @@ import SwiftUI
 
 struct OnboardingDescriptionView: View {
     let upperHeader: String
+    let highlightWord: String
     let lowerHeader: String
     let firstLine: String
     let secondLine: String
@@ -10,13 +11,11 @@ struct OnboardingDescriptionView: View {
     
     var body: some View {
         VStack {
-            Text(upperHeader)
+            Text(changeWordColor(upperHeader))
                 .font(AppFonts.vietnam34Bold)
-                .foregroundStyle(swapColors ? .black : AppColor.peachColor)
-            
-            Text(lowerHeader)
+                
+            Text(changeWordColor(lowerHeader))
                 .font(AppFonts.vietnam34Bold)
-                .foregroundStyle(swapColors ? AppColor.peachColor : .black)
                 .padding(.bottom, 7)
             
             VStack(spacing: 4) {
@@ -30,6 +29,19 @@ struct OnboardingDescriptionView: View {
             }
         }
         .padding()
+    }
+    
+    func changeWordColor(_ string: String) -> AttributedString {
+        var attrString: AttributedString {
+            var attrString = AttributedString(string)
+            
+            if let range = attrString.range(of: highlightWord) {
+                attrString[range].foregroundColor = AppColor.peachColor
+            }
+            
+            return attrString
+        }
+        return attrString
     }
 }
 
