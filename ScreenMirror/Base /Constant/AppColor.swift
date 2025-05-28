@@ -17,17 +17,36 @@ enum AppColor {
         opacity: 0.55
     )
     
+    static let descriptionColor = Color(
+        .sRGB,
+        red: 149.0 / 255.0,
+        green: 149.0 / 255.0,
+        blue: 149.0 / 255.0,
+        opacity: 1.0
+    )
+    
+    static var lightDarkGradient: LinearGradient {
+         LinearGradient(
+             gradient: Gradient(colors: [
+                 Color(red: 35/255, green: 35/255, blue: 35/255),
+                 Color(red: 15/255, green: 15/255, blue: 15/255)
+             ]),
+             startPoint: .top,
+             endPoint: .bottom
+         )
+     }
   
     static var peachGradient: LinearGradient {
           LinearGradient(
               gradient: Gradient(colors: [
-                Color(.sRGB, red: 255/255, green: 34/255, blue: 39/255, opacity: 1),
-                  Color(.sRGB, red: 255/255, green: 131/255, blue: 80/255, opacity: 1)
+                  Color(.sRGB, red: 255/255, green: 131/255, blue: 80/255, opacity: 1),
+                  Color(.sRGB, red: 255/255, green: 34/255, blue: 39/255, opacity: 1)
               ]),
               startPoint: .leading,
               endPoint: .trailing
           )
       }
+    
     static var backgroundGradient: LinearGradient {
          LinearGradient(
              gradient: Gradient(colors: [

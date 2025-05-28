@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F7DB929D2DE347750035214D /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F7DB929C2DE347750035214D /* ApphudSDK */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F73477002DE0BC5500AAD55D /* ScreenMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7DB929D2DE347750035214D /* ApphudSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = ScreenMirror;
 			packageProductDependencies = (
+				F7DB929C2DE347750035214D /* ApphudSDK */,
 			);
 			productName = ScreenMirror;
 			productReference = F73477002DE0BC5500AAD55D /* ScreenMirror.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = F73476F72DE0BC5500AAD55D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F7DB929B2DE347750035214D /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F73477012DE0BC5500AAD55D /* Products */;
 			projectDirPath = "";
@@ -347,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7DB929B2DE347750035214D /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7DB929C2DE347750035214D /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7DB929B2DE347750035214D /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F73476F82DE0BC5500AAD55D /* Project object */;
 }

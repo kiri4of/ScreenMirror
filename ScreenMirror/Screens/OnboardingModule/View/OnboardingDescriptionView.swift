@@ -20,12 +20,12 @@ struct OnboardingDescriptionView: View {
             
             VStack(spacing: 4) {
                 Text(firstLine)
-                    .foregroundColor(.secondary)
-                    .font(AppFonts.vietnam16SemiBold)
+                    .foregroundColor(AppColor.descriptionColor)
+                    .font(AppFonts.vietnam14SemiBold)
                 
                 Text(secondLine)
-                    .foregroundColor(.secondary)
-                    .font(AppFonts.vietnam16SemiBold)
+                    .foregroundColor(AppColor.descriptionColor)
+                    .font(AppFonts.vietnam14SemiBold)
             }
         }
         .padding()
@@ -34,6 +34,7 @@ struct OnboardingDescriptionView: View {
     func changeWordColor(_ string: String) -> AttributedString {
         var attrString: AttributedString {
             var attrString = AttributedString(string)
+            attrString.foregroundColor = .white
             
             if let range = attrString.range(of: highlightWord) {
                 attrString[range].foregroundColor = AppColor.peachColor
