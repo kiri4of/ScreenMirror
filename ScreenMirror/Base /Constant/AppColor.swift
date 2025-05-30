@@ -25,6 +25,13 @@ enum AppColor {
         opacity: 1.0
     )
     
+    static let grayCustom = Color(
+        .sRGB,
+        red: 68.0 / 255.0,
+        green: 68.0 / 255.0,
+        blue: 68.0 / 255.0
+    )
+    
     static var lightDarkGradient: LinearGradient {
          LinearGradient(
              gradient: Gradient(colors: [

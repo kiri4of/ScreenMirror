@@ -3,13 +3,14 @@ import SwiftUI
 
 enum Tab {
     case home
-    case cast
     case settings
 }
 
 struct CustomTabBarView: View {
     
     @Binding var selectedTab: Tab
+    
+    var onCastTap: () -> Void
     
     var body: some View {
         ZStack {
@@ -32,7 +33,7 @@ struct CustomTabBarView: View {
             //Central actionbutton
             
             Button {
-                selectedTab = .cast
+                onCastTap()
             } label: {
                 ZStack {
                     
@@ -51,14 +52,12 @@ struct CustomTabBarView: View {
     }
     //Background
     
-    
-    
     private func tabButton(_ tab: Tab, systemImage: String, label: String) -> some View {
         Button {
             selectedTab = tab
         } label: {
             VStack(spacing: 5){
-                Image(systemImage) //сделать смену картинки по нажатию на tab
+                Image(systemImage) 
                     .renderingMode(.template)
                     .font(.system(size: 20, weight: .medium))
                     .foregroundStyle(selectedTab == tab ? AnyShapeStyle(AppColor.peachGradient) : AnyShapeStyle(Color.gray))

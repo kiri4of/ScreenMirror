@@ -28,10 +28,10 @@ struct HomeView: View {
                     ForEach(viewModel.data, id: \.id) { category in
                         CategoryCell(category: category)
                             .frame(height: 160)
+                            .padding(.top, 10)
                     }
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 10)
                 
                 Spacer()
             }
