@@ -8,7 +8,7 @@ struct OnboardingView: View {
         ZStack {
             AppColor.backgroundGradient.ignoresSafeArea()
            
-            GlowingCircle()
+            GlowingCircle(offsetX: -132, offsetY: -350)
                 .zIndex(1)
             
             TabView(selection: $viewModel.currentPage) {

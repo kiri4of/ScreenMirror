@@ -35,6 +35,17 @@ enum AppColor {
              endPoint: .bottom
          )
      }
+    
+    static var lightDarkGradient2: LinearGradient {
+         LinearGradient(
+             gradient: Gradient(colors: [
+                 Color(red: 255/255, green: 255/255, blue: 255/255),
+                 Color(red: 107/255, green: 107/255, blue: 107/255)
+             ]),
+             startPoint: .bottom,
+             endPoint: .top
+         )
+     }
   
     static var peachGradient: LinearGradient {
           LinearGradient(

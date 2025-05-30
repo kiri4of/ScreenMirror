@@ -9,8 +9,8 @@ struct ScreenMirrorApp: SwiftUI.App {
     @StateObject private var appState = AppState()
     @StateObject private var onboardingViewModel = OnboardingViewModel()
     @StateObject private var paywallViewModel = PayWallViewModel()
-  //  @StateObject private var mainViewModel = MainViewModel()
-
+    @StateObject private var homeViewModel = HomeViewModel()
+    
     init() {
         Apphud.start(apiKey: Config.apphudAPIKey)
         PremiumViewModel.shared.load()
@@ -43,8 +43,7 @@ struct ScreenMirrorApp: SwiftUI.App {
                     }
                 }
         case .main:
-            //MainView(viewModel: mainViewModel)
-            ContentView()
+            MainTabView(homeViewModel: homeViewModel)
         }
     }
 }

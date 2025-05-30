@@ -26,7 +26,7 @@ final class AppState: ObservableObject {
     }
     
     func finishOnboarding() {
-        //hasSeenOnboarding = true
+        hasSeenOnboarding = true
         flow = .paywall
     }
     

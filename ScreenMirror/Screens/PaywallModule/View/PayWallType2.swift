@@ -9,7 +9,7 @@ struct PayWallType2View: View {
         ZStack {
             AppColor.backgroundGradient.ignoresSafeArea()
             
-            GlowingCircle()
+            GlowingCircle(offsetX: -132, offsetY: -350)
                 .zIndex(1)
             
             VStack {
