@@ -1,12 +1,15 @@
 import SwiftUI
 
 struct InvoiceView: View {
+    
+    var didTap: () -> Void
+    
     var body: some View {
         ZStack(alignment: .leading) {
             // Image
             Image("invoiceImage")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
                 .frame(height: 130)
                 .cornerRadius(20)
                 .clipped()
@@ -15,13 +18,14 @@ struct InvoiceView: View {
             // Text and arrow
             HStack {
                 Spacer()
+                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Screen Mirroring")
-                        .font(AppFonts.vietnam22Bold)
+                        .font(AppFonts.vietnam20Bold)
                         .foregroundColor(.white)
 
                     Text("Wirelessly stream from your\nphone to another screen")
-                        .font(AppFonts.vietnam16Regular)
+                        .font(AppFonts.vietnam14Regular)
                         .foregroundColor(.white.opacity(0.85))
                         .multilineTextAlignment(.leading)
                 }
@@ -35,11 +39,14 @@ struct InvoiceView: View {
             .padding(.leading, 40)
             .padding(.trailing, 22)
         }
+        .onTapGesture {
+            didTap()
+        }
         .frame(height: 130)
-        .padding(.horizontal, 20)
+       // .padding(.horizontal, 20)
     }
 }
 
 #Preview {
-    InvoiceView()
+    InvoiceView(didTap: {})
 }

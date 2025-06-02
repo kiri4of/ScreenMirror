@@ -3,6 +3,7 @@ import SwiftUI
 struct MainTabView: View {
     @State var selectedTab: Tab = .home
     @ObservedObject var homeViewModel: HomeViewModel
+    @StateObject var settingsVM = SettingsViewModel()   
     @State private var showEnableSheet = false
     
     var body: some View {
@@ -12,7 +13,9 @@ struct MainTabView: View {
                 HomeView(viewModel: homeViewModel)
                     .environmentObject(PremiumViewModel.shared)
             case .settings:
-                EmptyView()
+                SettingsView(viewModel: settingsVM)
+                    .environmentObject(PremiumViewModel.shared)
+                    .zIndex(settingsVM.showIconMenu ? 2 : 0)
             }
             
             //Tab bar
@@ -27,21 +30,24 @@ struct MainTabView: View {
             
             if showEnableSheet {
                 
-                Color.black.opacity(0.6)
+                ZStack {
+                    CustomDimmedBackdropView {
+                        withAnimation {
+                            showEnableSheet = false
+                        }
+                    }
+                    
+                    VStack {
+                        Spacer()
+                        EnableScreenMirrorSheetView {
+                            withAnimation { showEnableSheet = false }
+                        }
+                        .transition(.move(edge: .bottom))
+                    }
                     .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation { showEnableSheet = false }
-                    }
-                
-                VStack {
-                    Spacer()
-                    EnableScreenMirrorSheetView {
-                        withAnimation { showEnableSheet = false }
-                    }
-                    .transition(.move(edge: .bottom))
+                    .zIndex(10)
                 }
-                .ignoresSafeArea()
-                .zIndex(10)
+                .zIndex(1)
             }
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)

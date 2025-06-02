@@ -32,7 +32,7 @@ enum AppColor {
         blue: 68.0 / 255.0
     )
     
-    static var lightDarkGradient: LinearGradient {
+    static var lightDarkGradient2: LinearGradient {
          LinearGradient(
              gradient: Gradient(colors: [
                  Color(red: 35/255, green: 35/255, blue: 35/255),
@@ -43,14 +43,14 @@ enum AppColor {
          )
      }
     
-    static var lightDarkGradient2: LinearGradient {
+    static var lightDarkGradient: LinearGradient {
          LinearGradient(
              gradient: Gradient(colors: [
-                 Color(red: 255/255, green: 255/255, blue: 255/255),
-                 Color(red: 107/255, green: 107/255, blue: 107/255)
+                 Color(red: 35/255, green: 32/255, blue: 32/255),
+                 Color(red: 35/255, green: 32/255, blue: 32/255)
              ]),
-             startPoint: .bottom,
-             endPoint: .top
+             startPoint: .top,
+             endPoint: .bottom
          )
      }
   

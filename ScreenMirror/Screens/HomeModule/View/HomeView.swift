@@ -16,12 +16,14 @@ struct HomeView: View {
                 headerSection
                 
                 if !premium.premium {
-                    Button {
+                   
+                    InvoiceView {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         viewModel.showPaywall = true
-                    } label: {
-                        InvoiceView()
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 10)
                 }
                 
                 LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
@@ -32,6 +34,7 @@ struct HomeView: View {
                     }
                 }
                 .padding(.horizontal, 20)
+                .padding(.top, 10)
                 
                 Spacer()
             }
@@ -54,7 +57,5 @@ struct HomeView: View {
             Spacer()
         }
     }
-    
-    
 }
 
